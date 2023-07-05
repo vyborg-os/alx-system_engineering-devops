@@ -1,2 +1,2 @@
 #!/bin/bash
-$(file -b /tmp/iamafile)
+/tmp/iamafile: cannot open `/tmp/iamafile' (No such file or directory)
