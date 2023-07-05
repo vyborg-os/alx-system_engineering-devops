@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1A . .. | awk '{printf "%s%s", (NR>1?",":""), ($0~/^\.\.?$/?$0"/":$0)} END{print ""}'
+ls -la | sed -E 's/(^[d-])/\1\n/g' | sed -E ':a;N;$!ba;s/\n,/,/g' | tr '\n' ',' && echo
